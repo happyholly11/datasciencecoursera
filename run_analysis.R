@@ -2,13 +2,13 @@
 library(plyr)
 
 #Reads all the data files
-features<-read.table("data/UCI HAR Dataset/features.txt")
-subject_train<-read.table("data/UCI HAR Dataset/train/subject_train.txt")
-subject_xtrain<-read.table("data/UCI HAR Dataset/train/X_train.txt")
-subject_ytrain<-read.table("data/UCI HAR Dataset/train/Y_train.txt")
-subject_test<-read.table("data/UCI HAR Dataset/test/subject_test.txt")
-subject_xtest<-read.table("data/UCI HAR Dataset/test/X_test.txt")
-subject_ytest<-read.table("data/UCI HAR Dataset/test/Y_test.txt")
+features<-read.table("UCI HAR Dataset/features.txt")
+subject_train<-read.table("UCI HAR Dataset/train/subject_train.txt")
+subject_xtrain<-read.table("UCI HAR Dataset/train/X_train.txt")
+subject_ytrain<-read.table("UCI HAR Dataset/train/Y_train.txt")
+subject_test<-read.table("UCI HAR Dataset/test/subject_test.txt")
+subject_xtest<-read.table("UCI HAR Dataset/test/X_test.txt")
+subject_ytest<-read.table("UCI HAR Dataset/test/Y_test.txt")
 
 #Merges datasets into one and adds column names
 train<-cbind(subject_xtrain,subject_train,subject_ytrain)
@@ -36,4 +36,4 @@ colnames(output)[82]<-"Activity Description"
 output<-output[c(1,82,2:81)]
 output<-output[order(output$Activity, output$Subject),]
 
-write.table(output,file="data/UCI HAR Dataset/tidy_data.txt",sep = ",",row.names=FALSE)
+write.table(output,file="UCI HAR Dataset/tidy_data.txt",sep = ",",row.names=FALSE)
