@@ -4,7 +4,7 @@ Data Science Coursera
 
 ###Instructions for running the run_analysis.R script
 1. Download run_analysis.R into your R working directory
-2. Unzip the data file obtained from: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip into the your R working directory
+2. Unzip the data file obtained from: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip into your R working directory
 3. Do not rename the unzipped folder; it should be named "UCI HAR Dataset"
 4. Make sure you have the plyr package installed before running the script
 5. Run run_analysis.R and the tidy data file will be in your in UCI HAR Dataset folder
